@@ -21,14 +21,13 @@
 		}
 	}
 	
-		$signupPasswordError = "";
+	$signupPasswordError = "";
 	
 	//kas keegi vajutas nuppu ja see on olemas
 	
 	if (isset ($_POST["signupPassword"])) {
 		
-		//on olemas
-		//kas epost on tühi	
+		//on olemas	
 		if (empty ($_POST["signupPassword"])) {
 			
 			//on tühi
@@ -40,11 +39,52 @@
 			
 			if ( strlen ($_POST["signupPassword"]) < 8 ) {
 				
-				$SignupPasswordError = "*Parool peab olema vähemalt 8 tähemärki pikk"
+				$SignupPasswordError = "*Parool peab olema vähemalt 8 tähemärki pikk";
 			}
 		}
 	}
 
+	$firstNameError = "";
+	
+	//kas keegi vajutas nuppu ja see on olemas
+	
+	if (isset ($_POST["firstName"])) {
+		
+		//on olemas
+		if (empty ($_POST["firstName"])) {
+			
+			//on tühi
+			$firstNameError="Väli on kohustuslik";
+		}
+	}
+
+	$surnameError = "";
+	
+	//kas keegi vajutas nuppu ja see on olemas
+
+	if (isset ($_POST["surname"])) {
+	
+		//on olemas
+		if (empty ($_POST["surname"])) {
+			
+			//on tühi
+			$surnameError="Väli on kohustuslik";
+		}
+	}
+
+	$addressError = "";
+	
+	//kas keegi vajutas nuppu ja see on olemas
+
+	if (isset ($_POST["address"])) {
+	
+		//on olemas
+		if (empty ($_POST["address"])) {
+			
+			//on tühi
+			$addressError="Väli on kohustuslik";
+		}
+	}
 
 
 ?>
@@ -90,7 +130,38 @@
 			<input type="submit" value="Loo kasutaja">
 		
 		</form>
+	
+		<h1>Sisesta oma nimi</h1>
+
+		<form method="POST">
 		
+			<input name="firstName" placeholder="First Name" type="text"> <?php echo $firstNameError; ?>
+			
+			<br><br>
+			
+			<input name="surname" placeholder="Surname" type="text"> <?php echo $surnameError; ?>
+			
+			<br><br>
+			
+			<input type="submit" value="Sisesta">
 		
+		</form>
+	
+		<h1>Sisesta oma asukoht</h1>
+		
+		<form method="POST">
+			
+			<input name="address" placeholder="address" type="text"> <?php echo $addressError; ?>
+			
+			<br><br>
+			
+			<input type="submit" value="Sisesta">
+			
+		</form>
+	
 	</body>
 </html> 
+
+
+// Tulevates tundides plaanin tegeleda trennipäeviku laadse leheküljega. Hetkel veel idee üsna toores.
+// Kolmapäevaseks tunniks proovin ülesehituse enda jaoks selgemaks mõelda.
