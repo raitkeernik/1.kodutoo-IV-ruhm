@@ -161,7 +161,3 @@
 	
 	</body>
 </html> 
-
-
-// Tulevates tundides plaanin tegeleda trennipäeviku laadse leheküljega. Hetkel veel idee üsna toores.
-// Kolmapäevaseks tunniks proovin ülesehituse enda jaoks selgemaks mõelda.
