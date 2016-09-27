@@ -127,13 +127,9 @@
 			
 			<br><br>
 			
-			<input type="submit" value="Loo kasutaja">
-		
-		</form>
 	
-		<h1>Sisesta oma nimi</h1>
+		<h3>Sisesta oma nimi</h3>
 
-		<form method="POST">
 		
 			<input name="firstName" placeholder="First Name" type="text"> <?php echo $firstNameError; ?>
 			
@@ -143,21 +139,23 @@
 			
 			<br><br>
 			
-			<input type="submit" value="Sisesta">
-		
-		</form>
 	
-		<h1>Sisesta oma asukoht</h1>
+		<h3>Sisesta oma asukoht</h3>
 		
-		<form method="POST">
 			
 			<input name="address" placeholder="address" type="text"> <?php echo $addressError; ?>
 			
 			<br><br>
 			
-			<input type="submit" value="Sisesta">
+			<input type="submit" value="Loo kasutaja">
 			
 		</form>
 	
 	</body>
 </html> 
+
+
+<?php
+// Järgnevates tundides soovin alustada tööd õunaturu nimelise õunade vahendamise veebilehe kallal.
+// Ehk siis koht kus saavad inimesed sügisel üleliigseid õunu vastavalt soovile kas tasuta või raha eest pakkuda.
+?>
